@@ -13,7 +13,7 @@ typedef uint16_t u16;
 typedef int32_t i32;
 typedef uint32_t u32;
 
-static void sse_i32_sub()
+static void avx2_i32_sub()
 {
 	using type = i32;
 	puts("Задание 1. i32 C = A - B");
@@ -35,7 +35,7 @@ static void sse_i32_sub()
 	print_array(std::span{c, 8});
 }
 
-static void sse_i8_sum()
+static void avx2_i8_sum()
 {
 	using type = i8;
 	puts("Задание 3. i8 C = A + B");
@@ -57,7 +57,7 @@ static void sse_i8_sum()
 	print_array(std::span{c, 32});
 }
 
-static void sse_u16_sum()
+static void avx2_u16_sum()
 {
 	using type = u16;
 	puts("Задание 2. u16 C = A + B");
@@ -88,13 +88,13 @@ static void sse_u16_sum()
 
 int main()
 {
-	sse_i32_sub();
+	avx2_i32_sub();
 	std::println();
 
-	sse_u16_sum();
+	avx2_u16_sum();
 	std::println();
 	
-	sse_i8_sum();
+	avx2_i8_sum();
 
 	puts("Нажмите любую кнопку для завершения");
 	(void)getchar();
