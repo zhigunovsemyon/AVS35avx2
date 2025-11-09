@@ -79,7 +79,7 @@ static void avx2_u16_sum()
 
 	auto vec_a = _mm256_load_si256((__m256i *)a);
 	auto vec_b = _mm256_load_si256((__m256i *)b);
-	auto vec_res = _mm256_adds_epu8(vec_a, vec_b);
+	auto vec_res = _mm256_adds_epu16(vec_a, vec_b);
 	_mm256_store_si256((__m256i *)c, vec_res);
 
 	printf("c: ");
